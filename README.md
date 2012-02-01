@@ -6,7 +6,7 @@ _Simple web development framework for Ruby._
 
 * Built on top of [Rack](https://github.com/rack/rack) and [http_router](https://github.com/joshbuddy/http_router)
 * Insanely small ruby web framework - < 100 LC
-* Blazingly fast benchmark
+* Blazingly fast [benchmark](https://github.com/bry4n/simple/blob/master/examples/benchmark.log)
 * Inspired by [Sinatra](https://github.com/sinatra/sinatra)
 * Works with Thin, Unicorn, Mongrel, Pow, Heroku
 * Easy to write your own Ruby web application.
