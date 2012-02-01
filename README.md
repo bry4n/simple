@@ -21,9 +21,23 @@ The little snippet of the famous hello world web application.
 require 'simple'
   	
 class Example < Simple
+
   get "/" do
     [200, {"Content-Type" => "text/plain", ["Hello World"]]
   end
+
+  post "/users" do
+    # User.create or etc
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get "/users/online"
+        # json/xml output
+      end
+    end
+  end
+
 end
   
 run Example.new
@@ -43,7 +57,7 @@ This would create a Rack application.
 * Fork the project
 * Make your feature addition or bug fix.
 * Add test for it
-* Send me a pull request. Bonus points for topic branches.
+* Send me a pull request. Topic branches preferred.
 
 ## Copyright
 
