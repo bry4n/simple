@@ -24,7 +24,7 @@ class Example < Simple::Base
 
   # GET /
   get "/" do
-    [200, {"Content-Type" => "text/plain", ["Hello World"]]
+    [200, {"Content-Type" => "text/plain"}, ["Hello World"]]
   end
 
   # GET /hello
