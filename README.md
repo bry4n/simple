@@ -22,17 +22,20 @@ require 'simple'
   	
 class Example < Simple
 
+  # GET /
   get "/" do
     [200, {"Content-Type" => "text/plain", ["Hello World"]]
   end
 
+  # POST /users
   post "/users" do
     # User.create or etc
   end
 
+  # GET /api/v1/users/online.xml
   namespace :api do
     namespace :v1 do
-      get "/users/online"
+      get "/users/online" do
         # json/xml output
       end
     end
