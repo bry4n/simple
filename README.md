@@ -46,12 +46,9 @@ class Example < Simple::Base
     end
   end
 
-  # GET /google -> http://www.google.com/
-  get "/google", :redirect => "http://www.google.com/"
-
 end
   
-run Example.new
+run Example
 ````
 
 This would create a Rack application.
