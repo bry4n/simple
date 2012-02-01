@@ -20,7 +20,7 @@ The little snippet of the famous hello world web application.
 
 require 'simple'
   	
-class Example < Simple
+class Example < Simple::Base
 
   # GET /
   get "/" do
