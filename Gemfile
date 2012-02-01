@@ -1,9 +1,9 @@
-source :rubygems
+source "http://rubygems.org"
 
-gem 'rack'
-gem 'http_router'
+gemspec
 
 group :development do
+  gem 'parka'
   gem 'rake'
 end
 
