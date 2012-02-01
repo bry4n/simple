@@ -58,6 +58,7 @@ This would create a Rack application.
 * Before/After Filters
 * Helpers (Form/Link/etc)
 * Render Templates
+* Rails style router (match "/hi" => "controller#action")
 * And much more.
 
 ## Contribution
