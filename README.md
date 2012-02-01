@@ -27,6 +27,11 @@ class Example < Simple::Base
     [200, {"Content-Type" => "text/plain", ["Hello World"]]
   end
 
+  # GET /hello
+  get "/:message" do
+    # params[:message]
+  end
+
   # POST /users
   post "/users" do
     # User.create or etc
@@ -40,6 +45,9 @@ class Example < Simple::Base
       end
     end
   end
+
+  # GET /google -> http://www.google.com/
+  get "/google", :redirect => "http://www.google.com/"
 
 end
   
