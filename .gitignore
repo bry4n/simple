@@ -1,0 +1,4 @@
+*.rvm*
+Gemfile.lock
+README (Auto Saved)
+pkg/*
