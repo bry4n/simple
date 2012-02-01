@@ -2,7 +2,7 @@
 
 $ thin -R examples/helloworld.ru start
 
-$ ab -kc 10 -t 10 http://0.0.0.0:3000/
+$ ab -kc 30 -t 10 http://0.0.0.0:3000/
 
 ---------------------------------------------------------------------------------
 This is ApacheBench, Version 2.3 <$Revision: 1178079 $>
