@@ -1,0 +1,60 @@
+2-1-2012 - Mac OSX 10.7.2 - 2.4 Ghz Intel Core 2 Duo - 8GB Ram (1067Mhz DRR3)
+
+$ thin -R examples/helloworld.ru start
+
+$ ab -kc 10 -t 10 http://0.0.0.0:3000/
+
+---------------------------------------------------------------------------------
+This is ApacheBench, Version 2.3 <$Revision: 1178079 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 0.0.0.0 (be patient)
+Completed 5000 requests
+Completed 10000 requests
+Completed 15000 requests
+Completed 20000 requests
+Completed 25000 requests
+Completed 30000 requests
+Completed 35000 requests
+Finished 38698 requests
+
+
+Server Software:        thin
+Server Hostname:        0.0.0.0
+Server Port:            3000
+
+Document Path:          /
+Document Length:        12 bytes
+
+Concurrency Level:      30
+Time taken for tests:   10.000 seconds
+Complete requests:      38698
+Failed requests:        0
+Write errors:           0
+Keep-Alive requests:    38698
+Total transferred:      5611210 bytes
+HTML transferred:       464376 bytes
+Requests per second:    3869.70 [#/sec] (mean)
+Time per request:       7.753 [ms] (mean)
+Time per request:       0.258 [ms] (mean, across all concurrent requests)
+Transfer rate:          547.96 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     1    8   3.0      7      35
+Waiting:        0    8   3.0      7      35
+Total:          1    8   3.0      7      36
+
+Percentage of the requests served within a certain time (ms)
+  50%      7
+  66%      8
+  75%      9
+  80%     10
+  90%     12
+  95%     13
+  98%     15
+  99%     16
+ 100%     36 (longest request)
+---------------------------------------------------------------------------------
