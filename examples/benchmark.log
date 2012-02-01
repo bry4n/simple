@@ -1,4 +1,4 @@
-2-1-2012 - Mac OSX 10.7.2 - 2.4 Ghz Intel Core 2 Duo - 8GB Ram (1067Mhz DRR3)
+2-1-2012 - Mac OSX 10.7.2 - 2.4 Ghz Intel Core 2 Duo - 8GB Ram (1067Mhz DRR3) - Ruby 1.9.3 p0 with performance patch (https://gist.github.com/1688857)
 
 $ thin -R examples/helloworld.ru start
 
