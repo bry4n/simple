@@ -16,17 +16,17 @@ _Simple web development framework for Ruby._
 The little snippet of the famous hello world web application.
 
 ```ruby
-  # config.ru
+# config.ru
 
-  require 'simple'
+require 'simple'
   	
-  class Example < Simple
-    get "/" do
-      [200, {"Content-Type" => "text/plain", ["Hello World"]]
-    end
+class Example < Simple
+  get "/" do
+    [200, {"Content-Type" => "text/plain", ["Hello World"]]
   end
+end
   
-  run Example.new
+run Example.new
 ````
 
 This would create a Rack application.
