@@ -8,7 +8,7 @@ _Simple web development framework for Ruby._
 * Insanely small ruby web framework - < 100 LC
 * Blazingly fast [benchmark](https://github.com/bry4n/simple/blob/master/examples/benchmark.log)
 * Inspired by [Sinatra](https://github.com/sinatra/sinatra)
-* Works with Thin, Unicorn, Mongrel, Pow, Heroku
+* Works with [Thin](http://code.macournoyer.com/thin/), [Unicorn](http://unicorn.bogomips.org/), [Pow](http://pow.cx/), [Heroku](http://www.heroku.com/)
 * Easy to write your own Ruby web application.
 
 ## Basic Usage
