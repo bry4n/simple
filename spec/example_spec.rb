@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + "/spec_helper"
 describe "ExampleApp" do
   include Rack::Test::Methods
 
-  let(:app) { Example.new }
+  let(:app) { Example }
   
   it "GET /admin/show and then expect 200" do
     get "/admin/show"
@@ -21,12 +21,6 @@ describe "ExampleApp" do
     get "/blah/404"
     last_response.status.should == 404
     last_response.body.should == "Not Found"
-  end
-
-  it "GET /google and then redirect to google site" do
-    get "/google"
-    last_response.status.should == 302
-    last_response.body.should be_empty
   end
 
   it "POST /hello and then expect 200" do

@@ -7,32 +7,26 @@ require 'rack/test'
 
 class Example < Simple::Base
 
-  get "/google", :redirect => "http://google.com/"
-
   namespace :admin do
     get "/show" do
-      respond :admin
+      "admin"
     end
   end
 
   get '/hello' do
-    respond :get
+    "get"
   end
 
   post "/hello" do
-    respond :post
+    "post"
   end
 
   put "/hello" do
-    respond :put
+    "put"
   end
 
   delete "/hello" do
-    respond :delete
-  end
-
-  def self.respond(text)
-    [200, {"Content-Type" => "text/plain"}, [text]]
+    "delete"
   end
 
 end
