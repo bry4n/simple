@@ -4,32 +4,28 @@ require 'simple'
 
 class HelloWorld < Simple::Base
 
-  get "/google", :redirect => "http://www.google.com/"
-
   namespace :api do
     namespace :v1 do
       get "/main" do
-        respond "API!"
+        "API!!"
       end
     end
   end
 
   resource :say do
     get "/:message" do
-      message = params[:message]
-      text = "Hello #{message}!"
-      respond text
+      "You said: #{params[:message]}!"
     end
   end
 
   get "/" do
-    respond "Hello World!"
+    "Hello World!"
   end
 
-  def self.respond(text, content_type = "text/plain")
-    [200, {"Content-Type" => content_type}, [text]]
+  post "/test" do
+    [200, {"content-type" => "text/plain"}, ["test..."]]
   end
 
 end
 
-run HelloWorld.new
+run HelloWorld
