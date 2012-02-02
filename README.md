@@ -1,4 +1,9 @@
-# Simple 
+# Simple [![TravisCI][travis-img]][travis-ci] [![Dependency Status][gemnasium-img]][gemnasium]
+
+[travis-img]: https://secure.travis-ci.org/bry4n/simple.png?branch=master
+[travis-ci]: http://travis-ci.org/bry4n/simple
+[gemnasium-img]: https://gemnasium.com/bry4n/simple.png?travis
+[gemnasium]: https://gemnasium.com/bry4n/simple
 
 _Simple web development framework for Ruby._
 

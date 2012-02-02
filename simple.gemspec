@@ -12,6 +12,6 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://simplerb.com/"
   gem.files = Dir['**/*']
   # gem.executables = ""
-  gem.add_dependency "rack"
-  gem.add_dependency "http_router"
+  gem.add_dependency "rack", "~> 1.4.1"
+  gem.add_dependency "http_router", "~> 0.10.2"
 end
