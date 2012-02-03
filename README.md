@@ -7,6 +7,19 @@
 
 _Simple web development framework for Ruby._
 
+## Installation
+
+**_Notes: Simple is very new and still under development._** Feel free to create ticket and report about bug or improvement or addition.
+
+
+put this line in your Gemfile
+
+    gem "simple"
+
+or install with `gem` command line
+
+    gem install bundler
+
 ## Features
 
 * Built on top of [Rack](https://github.com/rack/rack) and [http_router](https://github.com/joshbuddy/http_router)
