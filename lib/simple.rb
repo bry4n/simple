@@ -37,6 +37,7 @@ class Simple
       def put(path, options = {}, &blk); route(:put, path, options, &blk); end
       def delete(path, options = {}, &blk); route(:delete, path, options, &blk); end
       def head(path, options = {}, &blk); route(:head, path, options, &blk); end
+      def redirect(path, status=302); [status, {"Location" => path}, []]; end  
       
       def call(env)
         @request  = Rack::Request.new(env)

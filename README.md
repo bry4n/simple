@@ -22,12 +22,13 @@ or install with `gem` command line
 
 ## Features
 
+* Barebone Framework; Simple doesn't ship with dependencies like Tilt, Helpers, etc. You can build your own stack for your application.
 * Built on top of [Rack](https://github.com/rack/rack) and [http_router](https://github.com/joshbuddy/http_router)
 * Insanely small ruby web framework - < 100 LC
 * Blazingly fast [benchmark](https://github.com/bry4n/simple/blob/master/examples/benchmark.log)
 * Inspired by [Sinatra](https://github.com/sinatra/sinatra)
 * Works with [Thin](http://code.macournoyer.com/thin/), [Unicorn](http://unicorn.bogomips.org/), [Pow](http://pow.cx/), [Heroku](http://www.heroku.com/)
-* Easy to write your own Ruby web application.
+* sinatra-like DSL (get, post, put, and delete)
 
 ## Basic Usage
 
@@ -64,20 +65,22 @@ class Example < Simple::Base
     end
   end
 
+  # render :index
+  def self.render(template)
+    # Tilt code here or any template engines
+  end
+
+  # halt "Access denied!"
+  def self.halt(message, status=403)
+   [status, {"Content-Type" => "text/plain"}, [message]
+  end
+
 end
   
 run Example
 ````
 
-This would create a Rack application.
-
-## TODO
-
-* Before/After Filters
-* Helpers (Form/Link/etc)
-* Render Templates
-* Rails style router (match "/hi" => "controller#action")
-* And much more.
+This would create a Rack application. Run the application with `rackup` or `thin` or `unicorn` command line.
 
 ## Contribution
 
