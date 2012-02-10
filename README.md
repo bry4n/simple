@@ -46,21 +46,26 @@ class Example < Simple::Base
     [200, {"Content-Type" => "text/plain"}, ["Hello World"]]
   end
 
+  # POST /
+  post "/" do
+    "Posted!"
+  end
+
   # GET /hello
   get "/:message" do
-    # params[:message]
+    "You said: #{params[:message]}"
   end
 
   # POST /users
   post "/users" do
-    # User.create or etc
+    render :index
   end
 
-  # GET /api/v1/users/online.xml
+  # GET /api/v1/users
   namespace :api do
     namespace :v1 do
-      get "/users/online" do
-        # json/xml output
+      get "/users" do
+        halt "Not found", 404
       end
     end
   end
